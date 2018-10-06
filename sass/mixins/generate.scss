@@ -1,0 +1,78 @@
+@mixin prismjs-material-theme--generate() {
+	@if ($prismjs-material-theme--use-css-variables != 0) {
+		:root {
+			@include prismjs-material-theme--css-variable-set($prismjs-material-theme--background, background);
+			@include prismjs-material-theme--css-variable-set($prismjs-material-theme--pre--border-radius, pre--border-radius);
+			@include prismjs-material-theme--css-variable-set($prismjs-material-theme--pre--padding, pre--padding);
+			@include prismjs-material-theme--css-variable-set($prismjs-material-theme--pre--margin, pre--margin);
+		}
+	}
+
+	%base {
+		color: $prismjs-material-theme--color;
+		background: none;
+		text-shadow: $prismjs-material-theme--text-shadow;
+		font-family: $prismjs-material-theme--font-family;
+		text-align: left;
+		white-space: pre;
+		word-spacing: normal;
+		word-break: normal;
+		word-wrap: normal;
+		line-height: $prismjs-material-theme--line-height;
+
+		-moz-tab-size: $prismjs-material-theme--tab-size; // sass-lint:disable-line no-vendor-prefixes
+		-o-tab-size: $prismjs-material-theme--tab-size; // sass-lint:disable-line no-vendor-prefixes
+		tab-size: $prismjs-material-theme--tab-size;
+
+		-webkit-hyphens: none; // sass-lint:disable-line no-vendor-prefixes
+		-moz-hyphens: none; // sass-lint:disable-line no-vendor-prefixes
+		-ms-hyphens: none; // sass-lint:disable-line no-vendor-prefixes
+		hyphens: none;
+
+		&::-moz-selection,
+		& ::-moz-selection {
+			text-shadow: none;
+			background: $prismjs-material-theme--selection--background;
+			opacity: 1;
+			@if ($prismjs-material-theme--selection--color) {
+				color: $prismjs-material-theme--selection--color;
+			}
+		}
+
+		&::selection,
+		& ::selection {
+			text-shadow: none;
+			background: $prismjs-material-theme--selection--background;
+			opacity: 1;
+			@if ($prismjs-material-theme--selection--color) {
+				color: $prismjs-material-theme--selection--color;
+			}
+		}
+
+		@media print {
+			text-shadow: none !important; // sass-lint:disable-line no-important
+		}
+	}
+
+	[class*="language-"] {
+		@at-root code#{&} {
+			@extend %base;
+
+			:not(pre) > & {
+				background: $prismjs-material-theme--background;
+				padding: $prismjs-material-theme--code--padding;
+				border-radius: $prismjs-material-theme--code--border-radius;
+				white-space: normal;
+			}
+		}
+
+		@at-root pre#{&} {
+			@extend %base;
+			@include prismjs-material-theme--css-variable-use(background, $prismjs-material-theme--background, background);
+			@include prismjs-material-theme--css-variable-use(border-radius, $prismjs-material-theme--pre--border-radius, pre--border-radius);
+			@include prismjs-material-theme--css-variable-use(padding, $prismjs-material-theme--pre--padding, pre--padding);
+			@include prismjs-material-theme--css-variable-use(margin, $prismjs-material-theme--pre--margin, pre--margin);
+			overflow: auto;
+		}
+	}
+}

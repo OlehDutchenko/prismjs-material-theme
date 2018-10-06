@@ -13,6 +13,7 @@ const notify = require('gulp-notify');
 const cssnano = require('cssnano');
 const sourcemaps = require('gulp-sourcemaps');
 const changed = require('gulp-changed');
+const browserSync = require('browser-sync').create();
 
 // ----------------------------------------
 // Private
@@ -20,7 +21,7 @@ const changed = require('gulp-changed');
 
 const sassDest = './css/';
 const sassSource = './sass/*.scss';
-const sassWatch = './sass/**/*.scss';
+const sassWatch = ['./sass/**/*.scss', './sass/_*.scss'];
 
 const onProduction = !!argv.production;
 const onWriteDest = argv.dest !== false;
@@ -70,11 +71,20 @@ gulp.task('sass', () => {
 		})))
 		.pipe(sourcemaps.write())
 		.pipe(changed(sassDest, { hasChanged: changed.compareContents }))
-		.pipe(gulp.dest(sassDest));
+		.pipe(gulp.dest(sassDest))
+		.pipe(browserSync.stream());
 });
 
-gulp.task('watch', () => {
+gulp.task('serve', () => {
+	browserSync.init({
+		server: {
+			baseDir: './',
+			directory: true
+		}
+	});
+
 	gulp.watch(sassWatch, gulp.series('sass'));
+	gulp.watch('./index.html').on('change', browserSync.reload);
 });
 
 // ----------------------------------------
@@ -82,4 +92,4 @@ gulp.task('watch', () => {
 // ----------------------------------------
 
 gulp.task('build', gulp.series('sass'));
-gulp.task('dev', gulp.series('sass', gulp.parallel('watch')));
+gulp.task('dev', gulp.series('sass', 'serve'));
