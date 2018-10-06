@@ -1,0 +1,20 @@
+{
+	"parser": "babel-eslint",
+	"extends": [
+		"standard"
+	],
+	"rules": {
+		"no-tabs": "off",
+		"indent": [
+			"error",
+			"tab",
+			{
+				"SwitchCase": 1
+			}
+		],
+		"semi": [
+			"error",
+			"always"
+		]
+	}
+}

@@ -1,0 +1,18 @@
+/.cache
+/.idea
+/.temp
+/.vscode
+/node_modules
+/.vagrant
+/atlassian-ide-plugin.xml
+/export
+/nbproject
+
+# all
+#------------------------------------
+
+*.log*
+.DS_Store
+thumbs.db
+*.ipr
+*.iws

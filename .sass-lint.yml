@@ -1,0 +1,10 @@
+files:
+  include:
+    - ./sass/**/*.scss
+options:
+  config-file: ./node_modules/happiness-scss-config/.sass-lint.yml
+rules:
+  max-file-line-count:
+    - 0
+    -
+      length: 500
