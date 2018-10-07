@@ -1,0 +1,12 @@
+@mixin prismjs-material-theme--css-variable-use($css-property, $value, $var) {
+	@if $value {
+		@if $prismjs-material-theme--use-css-variables == 1 {
+			#{$css-property}: var(--prismjs-material-theme--#{$var});
+			#{$css-property}: $value; // sass-lint:disable-line no-duplicate-properties
+		} @else if $prismjs-material-theme--use-css-variables == 2 {
+			#{$css-property}: var(--prismjs-material-theme--#{$var});
+		} @else {
+			#{$css-property}: $value;
+		}
+	}
+}

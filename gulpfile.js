@@ -7,11 +7,13 @@
 const gulp = require('gulp');
 const iF = require('gulp-if');
 const sass = require('gulp-sass');
-const sourcemaps = require('gulp-sourcemaps');
 const posctcss = require('gulp-postcss');
 const argv = require('yargs').argv;
 const notify = require('gulp-notify');
+const cssnano = require('cssnano');
+const sourcemaps = require('gulp-sourcemaps');
 const changed = require('gulp-changed');
+const browserSync = require('browser-sync').create();
 
 // ----------------------------------------
 // Private
@@ -19,7 +21,7 @@ const changed = require('gulp-changed');
 
 const sassDest = './css/';
 const sassSource = './sass/*.scss';
-// const sassWatch = './sass/**/*.scss';
+const sassWatch = ['./sass/**/*.scss', './sass/_*.scss'];
 
 const onProduction = !!argv.production;
 const onWriteDest = argv.dest !== false;
@@ -31,9 +33,15 @@ const onWriteDest = argv.dest !== false;
 gulp.task('sass', () => {
 	if (onProduction) {
 		return gulp.src(sassSource)
-			.pipe(sass())
+			.pipe(sass({
+				indentType: 'tab',
+				indentWidth: 1,
+				linefeed: 'crlf',
+				outputStyle: 'expanded'
+			}))
+			.pipe(iF(onWriteDest, gulp.dest(sassDest)))
 			.pipe(posctcss([
-				require('cssnano')({
+				cssnano({
 					preset: ['default', {
 						zindex: false,
 						autoprefixer: false,
@@ -44,23 +52,44 @@ gulp.task('sass', () => {
 					}]
 				})
 			]))
+			.on('data', file => {
+				file.stem = file.stem + '.min';
+			})
 			.pipe(iF(onWriteDest, gulp.dest(sassDest)));
 	}
 
 	return gulp.src(sassSource)
 		.pipe(sourcemaps.init())
-		.pipe(sass().on('error', notify.onError({
+		.pipe(sass({
+			indentType: 'tab',
+			indentWidth: 1,
+			linefeed: 'crlf',
+			outputStyle: 'expanded'
+		}).on('error', notify.onError({
 			message: 'Error: <%= error.message %>',
 			title: 'Error running something'
 		})))
 		.pipe(sourcemaps.write())
 		.pipe(changed(sassDest, { hasChanged: changed.compareContents }))
-		.pipe(gulp.dest(sassDest));
+		.pipe(gulp.dest(sassDest))
+		.pipe(browserSync.stream());
+});
+
+gulp.task('serve', () => {
+	browserSync.init({
+		server: {
+			baseDir: './',
+			directory: true
+		}
+	});
+
+	gulp.watch(sassWatch, gulp.series('sass'));
+	gulp.watch('./index.html').on('change', browserSync.reload);
 });
 
 // ----------------------------------------
-// Exports
+// Public
 // ----------------------------------------
 
-// Если это модуль, он должен экспортировать
-// Описаный в нем функционал или данные из текущего файла
+gulp.task('build', gulp.series('sass'));
+gulp.task('dev', gulp.series('sass', 'serve'));

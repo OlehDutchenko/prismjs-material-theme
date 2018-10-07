@@ -1,0 +1,8 @@
+@mixin prismjs-material-theme--css-variable-set($value, $var) {
+	@if $value {
+		$prop: --prismjs-material-theme--#{ $var };
+		@if $prismjs-material-theme--use-css-variables != 0 {
+			$prop: #{$value};
+		}
+	}
+}

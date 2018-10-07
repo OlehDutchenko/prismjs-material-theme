@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "gulp sass",
-    "build": "gulp sass --production",
+    "dev": "gulp dev sass",
+    "build": "gulp build --production",
     "test": "npm run sass-lint && npm run eslint && npm run build -- --no-dest",
     "sass-lint": "sass-lint -v -q",
     "eslint": "eslint ./gulpfile.js --fix"

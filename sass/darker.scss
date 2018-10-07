@@ -1,0 +1,4 @@
+@import "./core";
+@import "./themes/darker-theme-defaults";
+
+@include prismjs-material-theme--generate();
