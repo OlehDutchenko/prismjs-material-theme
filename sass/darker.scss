@@ -1,4 +1,8 @@
-@import "./core";
-@import "./themes/darker-theme-defaults";
+@import "~prismjs-theme-sass-core/sass/core/generate";
 
-@include prismjs-material-theme--generate();
+$prismjs-theme-core--use-css-variables: 2;
+$prismjs-theme-core--background: #2f2f2f;
+$prismjs-theme-core--selection--color: #eee;
+$prismjs-theme-core--selection--background: #363636;
+
+@include prismjs-theme-core--generate();
