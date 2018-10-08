@@ -23,5 +23,4 @@ thumbs.db
 .editorconfig
 .eslintrc.json
 .sass-lint.yml
-gulpfile.js
 index.html
