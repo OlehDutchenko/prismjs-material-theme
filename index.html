@@ -15,13 +15,37 @@
 &lt;head>
 	&lt;title>PhpStorm&lt;/title>
 &lt;/head>
-&lt;body>
+&lt;body bgcolor="#ee33cc">
 	&lt;h1>PhpStorm&lt;/h1>
 	&lt;p>&lt;br>&lt;b>&lt;IMG border=0 height=12 src="images/hg.gif" width=18 >
 	What is PhpStorm? &#x00B7; &Alpha; &lt;/b>&lt;br>&lt;br>
 	&lt;/body>
 &lt;/html></code></pre>
 <pre class="lang-css"><code>@import "manual.css";
+
+@font-face {
+	font-family: DroidSans;
+	src: url(DroidSans.ttf);
+	unicode-range: U+000-5FF, U+1e00-1fff, U+2000-2300;
+}
+
+h1.mystyle:lang(en) {
+	color: blue; /* TODO: change THIS to yellow for next version! */
+	border: rgb(255, 0, 0);
+	background-color: #FAFAFA;
+	background: url(hello.jpg) !important;
+}
+
+div > p, p ~ ul, input [type="radio"] {
+	color: green;
+	width: 80%;
+}
+
+#header:after {
+	color: red;
+}
+</code></pre>
+<pre class="lang-scss"><code>@import "manual.css";
 
 @font-face {
 	font-family: DroidSans;
@@ -99,5 +123,8 @@ const {
 
 console.log(9, null, undefined, true, false, 999.7, 'str', /regexp/gim, {}, []);</code></pre>
 	<script src="https://unpkg.com/prismjs@latest/prism.js"></script>
+	<script src="https://unpkg.com/prismjs@latest/components/prism-css-extras.js"></script>
+	<script src="https://unpkg.com/prismjs@latest/components/prism-sass.js"></script>
+	<script src="https://unpkg.com/prismjs@latest/components/prism-scss.js"></script>
 </body>
 </html>

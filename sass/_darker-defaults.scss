@@ -25,8 +25,7 @@ $prismjs-theme-core--token-string: map-merge($prismjs-theme-core--token-string, 
 ));
 
 $prismjs-theme-core--token-string--style: map-merge($prismjs-theme-core--token-string--style, (
-		color: false,
-		background: false
+		color: false
 ));
 
 $prismjs-theme-core--token-string--language-css: $prismjs-theme-core--token-string--style;
