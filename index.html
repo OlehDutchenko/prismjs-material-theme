@@ -7,9 +7,124 @@
 </head>
 <body>
 <div><code class="lang-js">console.log(999);</code></div>
-	<pre class="lang-js"><code>(function (x, y) {
-	console.log(x + y);
-})(1, '1');</code></pre>
+<pre class="lang-markup"><code>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+&lt;!--
+*        Sample comment
+-->
+&lt;HTML>
+&lt;head>
+	&lt;title>PhpStorm&lt;/title>
+&lt;/head>
+&lt;body bgcolor="#ee33cc">
+	&lt;h1>PhpStorm&lt;/h1>
+	&lt;p>&lt;br>&lt;b>&lt;IMG border=0 height=12 src="images/hg.gif" width=18 >
+	What is PhpStorm? &#x00B7; &Alpha; &lt;/b>&lt;br>&lt;br>
+	&lt;/body>
+&lt;/html></code></pre>
+<pre class="lang-css"><code>@import "manual.css";
+
+@font-face {
+	font-family: DroidSans;
+	src: url(DroidSans.ttf);
+	unicode-range: U+000-5FF, U+1e00-1fff, U+2000-2300;
+}
+
+h1.mystyle:lang(en) {
+	color: blue; /* TODO: change THIS to yellow for next version! */
+	border: rgb(255, 0, 0);
+	background-color: #FAFAFA;
+	background: url(hello.jpg) !important;
+}
+
+div > p, p ~ ul, input [type="radio"] {
+	color: green;
+	width: 80%;
+}
+
+#header:after {
+	color: red;
+}
+</code></pre>
+<pre class="lang-scss"><code>@import "manual.css";
+
+@font-face {
+	font-family: DroidSans;
+	src: url(DroidSans.ttf);
+	unicode-range: U+000-5FF, U+1e00-1fff, U+2000-2300;
+}
+
+h1.mystyle:lang(en) {
+	color: blue; /* TODO: change THIS to yellow for next version! */
+	border: rgb(255, 0, 0);
+	background-color: #FAFAFA;
+	background: url(hello.jpg) !important;
+}
+
+div > p, p ~ ul, input [type="radio"] {
+	color: green;
+	width: 80%;
+}
+
+#header:after {
+	color: red;
+}
+</code></pre>
+<pre class="lang-js"><code>var globalVar;
+
+/**
+ * Constructor for &lt;code>AjaxRequest&lt;/code> class
+ * @param url the url for the request&lt;p/>
+ */
+function AjaxRequest (url) {
+	var urls = ["www.cnn.com", 5, globalVar];
+	this.request = new XMLHttpRequest();
+	url = url.replace(/^\s*(.*)/, "$1"); // skip leading whitespace
+	/* check the url to be in urls */
+	var a = "\u1111\z\n\u11";
+	this.foo = new function () {};
+	foo();
+	hello = () => console.log("hello")
+}
+
+function run (arg1, arg2) {
+	let y = 5;
+	console.log(arg1, arg2 + y);
+}
+
+@decorator()
+class NameClass {
+	constructor () {
+		this.count = 0;
+	}
+
+	get current () {
+		return this.count;
+	}
+
+	static get ns () {
+		return 'xXx';
+	}
+}
+
+typeof 44;
+
+var str = 'str';
+var x = MyInterface, y = string, z = FooBarAlias;
+
+const x = demo => demo + 5;
+let y = (...msg) => {
+	console.log(msg);
+};
+
+const {
+	one: once,
+	two: twice = 2
+} = obj;
+
+console.log(9, null, undefined, true, false, 999.7, 'str', /regexp/gim, {}, []);</code></pre>
 	<script src="https://unpkg.com/prismjs@latest/prism.js"></script>
+	<script src="https://unpkg.com/prismjs@latest/components/prism-css-extras.js"></script>
+	<script src="https://unpkg.com/prismjs@latest/components/prism-sass.js"></script>
+	<script src="https://unpkg.com/prismjs@latest/components/prism-scss.js"></script>
 </body>
 </html>
