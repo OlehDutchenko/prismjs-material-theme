@@ -21,7 +21,7 @@
   },
   "homepage": "https://github.com/dutchenkoOleg/prismjs-material-theme#readme",
   "dependencies": {
-    "prismjs-theme-sass-core": "0.0.3"
+    "prismjs-theme-sass-core": "0.0.4"
   },
   "devDependencies": {
     "babel-eslint": "^10.0.1",
