@@ -103,7 +103,8 @@ $prismjs-theme-core--token-inserted: map-merge($prismjs-theme-core--token-insert
 ));
 
 $prismjs-theme-core--token-keyword: map-merge($prismjs-theme-core--token-keyword, (
-		color: #c792ea
+		color: #c792ea,
+		font-style: italic
 ));
 
 $prismjs-theme-core--token-number: map-merge($prismjs-theme-core--token-number, (
