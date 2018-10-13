@@ -3,128 +3,196 @@
 <head>
 	<meta charset="UTF-8">
 	<title></title>
-	<link rel="stylesheet" href="./css/darker.css">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,700,700i" rel="stylesheet">
+	<link id="theme-href" rel="stylesheet" href="./css/darker.css">
+	<style>
+		html {
+			font-family: 'Roboto', sans-serif;
+		}
+
+		hr {
+			border-width: 0;
+			margin: .25em 0 0;
+			border-top: 2px solid rgba(0, 0, 0, .45);
+		}
+
+		.container {
+			width: 92%;
+			max-width: 1280px;
+			margin: 0 auto;
+		}
+
+		.controls {
+			position: sticky;
+			z-index: 10;
+			background-color: white;
+			top: 0;
+			padding: 1em 0;
+		}
+
+		.controls::after {
+			content: '';
+			position: absolute;
+			top: 100%;
+			height: 5px;
+			left: 0;
+			right: 0;
+			background-color: rgba(0,0,0,.45);
+		}
+
+		.controls__list + .controls__list {
+			padding-top: .75em;
+		}
+
+		.button {
+			padding: 10px 14px;
+			border-radius: 3px;
+			border-width: 0;
+			background-color: #eee;
+			color: #345;
+			font-weight: bold;
+			cursor: pointer;
+		}
+
+		.button.is-active {
+			cursor: default;
+			background-color: #ff6666;
+			color: #fff;
+		}
+
+		.block {
+			display: none;
+		}
+
+		.block__code {
+			padding-top: 1em;
+		}
+
+		.block.is-active {
+			display: block;
+		}
+	</style>
 </head>
 <body>
-<div><code class="lang-js">console.log(999);</code></div>
-<pre class="lang-markup"><code>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
-&lt;!--
-*        Sample comment
--->
-&lt;HTML>
-&lt;head>
-	&lt;title>PhpStorm&lt;/title>
-&lt;/head>
-&lt;body bgcolor="#ee33cc">
-	&lt;h1>PhpStorm&lt;/h1>
-	&lt;p>&lt;br>&lt;b>&lt;IMG border=0 height=12 src="images/hg.gif" width=18 >
-	What is PhpStorm? &#x00B7; &Alpha; &lt;/b>&lt;br>&lt;br>
-	&lt;/body>
-&lt;/html></code></pre>
-<pre class="lang-css"><code>@import "manual.css";
+<div>
+	<div class="container">
+		<h1 class="title">prismjs-material-theme</h1>
+		<hr>
+		<div class="controls">
+			<div class="controls__list">
+				<button class="button js-change-theme is-active" data-href="./css/darker.css">theme darker</button>
+				<button class="button js-change-theme" data-href="./css/oceanic.css">theme oceanic</button>
+			</div>
+			<div class="controls__list">
+				<button class="button js-change-lang is-active" data-lang="css">CSS</button>
+				<button class="button js-change-lang" data-lang="javascript">JavaScript</button>
+			</div>
+		</div>
 
-@font-face {
-	font-family: DroidSans;
-	src: url(DroidSans.ttf);
-	unicode-range: U+000-5FF, U+1e00-1fff, U+2000-2300;
+		<div class="block is-active js-block-lang" data-lang="css">
+			<div class="block__code">
+				<pre><code class="language-css">html {
+	font-family: 'Roboto', sans-serif;
 }
 
-h1.mystyle:lang(en) {
-	color: blue; /* TODO: change THIS to yellow for next version! */
-	border: rgb(255, 0, 0);
-	background-color: #FAFAFA;
-	background: url(hello.jpg) !important;
+hr {
+	border-width: 0;
+	margin: .25em 0 0;
+	border-top: 2px solid rgba(0, 0, 0, .45);
 }
 
-div > p, p ~ ul, input [type="radio"] {
-	color: green;
-	width: 80%;
-}
+.container {
+	width: 92%;
+	max-width: 1280px;
+	margin: 0 auto;
+}</code></pre>
+			</div>
+			<div class="block__code">CSS2</div>
+		</div>
 
-#header:after {
-	color: red;
-}
-</code></pre>
-<pre class="lang-scss"><code>@import "manual.css";
+		<div class="block js-block-lang" data-lang="javascript">
+			<div class="block__code">
+				<pre><code class="language-javascript">(function () {
+	var $changeTheme = document.querySelectorAll('.js-change-theme');
+	var activeClass = 'is-active';
 
-@font-face {
-	font-family: DroidSans;
-	src: url(DroidSans.ttf);
-	unicode-range: U+000-5FF, U+1e00-1fff, U+2000-2300;
-}
-
-h1.mystyle:lang(en) {
-	color: blue; /* TODO: change THIS to yellow for next version! */
-	border: rgb(255, 0, 0);
-	background-color: #FAFAFA;
-	background: url(hello.jpg) !important;
-}
-
-div > p, p ~ ul, input [type="radio"] {
-	color: green;
-	width: 80%;
-}
-
-#header:after {
-	color: red;
-}
-</code></pre>
-<pre class="lang-js"><code>var globalVar;
-
-/**
- * Constructor for &lt;code>AjaxRequest&lt;/code> class
- * @param url the url for the request&lt;p/>
- */
-function AjaxRequest (url) {
-	var urls = ["www.cnn.com", 5, globalVar];
-	this.request = new XMLHttpRequest();
-	url = url.replace(/^\s*(.*)/, "$1"); // skip leading whitespace
-	/* check the url to be in urls */
-	var a = "\u1111\z\n\u11";
-	this.foo = new function () {};
-	foo();
-	hello = () => console.log("hello")
-}
-
-function run (arg1, arg2) {
-	let y = 5;
-	console.log(arg1, arg2 + y);
-}
-
-@decorator()
-class NameClass {
-	constructor () {
-		this.count = 0;
+	for (var i = 0; i < $changeTheme.length; i++) {
+		$changeTheme[i].addEventListener('click', changeTheme);
 	}
 
-	get current () {
-		return this.count;
+	function changeTheme () {
+		if (this.classList.contains(activeClass)) {
+			return;
+		}
+		$themeHref.href = this.dataset.href;
+		toggleActive($changeTheme, this);
 	}
 
-	static get ns () {
-		return 'xXx';
+	function toggleActive ($list, $element) {
+		for (var i = 0; i < $list.length; i++) {
+			var $el = $list[i];
+			var doClass = $el === $element ? 'add' : 'remove';
+			$el.classList[doClass](activeClass);
+		}
 	}
-}
+})();</code></pre>
+			</div>
+		</div>
 
-typeof 44;
+	</div>
 
-var str = 'str';
-var x = MyInterface, y = string, z = FooBarAlias;
-
-const x = demo => demo + 5;
-let y = (...msg) => {
-	console.log(msg);
-};
-
-const {
-	one: once,
-	two: twice = 2
-} = obj;
-
-console.log(9, null, undefined, true, false, 999.7, 'str', /regexp/gim, {}, []);</code></pre>
 	<script src="https://unpkg.com/prismjs@latest/prism.js"></script>
 	<script src="https://unpkg.com/prismjs@latest/components/prism-css-extras.js"></script>
 	<script src="https://unpkg.com/prismjs@latest/components/prism-sass.js"></script>
 	<script src="https://unpkg.com/prismjs@latest/components/prism-scss.js"></script>
+	<script>
+		(function () {
+			var $changeTheme = document.querySelectorAll('.js-change-theme');
+			var $changeLang = document.querySelectorAll('.js-change-lang');
+			var $blockLang = document.querySelectorAll('.js-block-lang');
+			var $themeHref = document.getElementById('theme-href');
+			var activeClass = 'is-active';
+
+			for (var i = 0; i < $changeTheme.length; i++) {
+				$changeTheme[i].addEventListener('click', changeTheme);
+			}
+
+			for (var i = 0; i < $changeLang.length; i++) {
+				$changeLang[i].addEventListener('click', changeLang);
+			}
+
+			function changeTheme () {
+				if (this.classList.contains(activeClass)) {
+					return;
+				}
+				$themeHref.href = this.dataset.href;
+				toggleActive($changeTheme, this);
+			}
+
+			function changeLang () {
+				if (this.classList.contains(activeClass)) {
+					return;
+				}
+				var lang = this.dataset.lang;
+				for (var i = 0; i < $blockLang.length; i++) {
+					var $block = $blockLang[i];
+					if ($block.dataset.lang === lang) {
+						$block.classList.add(activeClass);
+						continue;
+					}
+					$block.classList.remove(activeClass);
+				}
+				toggleActive($changeLang, this);
+			}
+
+			function toggleActive ($list, $element) {
+				for (var i = 0; i < $list.length; i++) {
+					var $el = $list[i];
+					var doClass = $el === $element ? 'add' : 'remove';
+					$el.classList[doClass](activeClass);
+				}
+			}
+		})();
+	</script>
 </body>
 </html>
