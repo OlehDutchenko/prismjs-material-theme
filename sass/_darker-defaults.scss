@@ -155,6 +155,10 @@ $prismjs-theme-core--token-tag: map-merge($prismjs-theme-core--token-tag, (
 		color: #ff6666
 ));
 
+$prismjs-theme-core--token-unit: map-merge($prismjs-theme-core--token-unit, (
+		color: #ff6666
+));
+
 $prismjs-theme-core--token-url: map-merge($prismjs-theme-core--token-url, (
 		color: #ff6666
 ));

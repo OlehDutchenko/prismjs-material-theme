@@ -31,11 +31,11 @@ $prismjs-theme-core--token-attr-name: map-merge($prismjs-theme-core--token-attr-
 ));
 
 $prismjs-theme-core--token-attr-value: map-merge($prismjs-theme-core--token-attr-value, (
-		color: #a5e844
+		color: #c3e88d
 ));
 
 $prismjs-theme-core--token-attribute: map-merge($prismjs-theme-core--token-attribute, (
-		color: #a5e844
+		color: #c3e88d
 ));
 
 $prismjs-theme-core--token-boolean: map-merge($prismjs-theme-core--token-boolean, (
@@ -63,7 +63,7 @@ $prismjs-theme-core--token-class-name: map-merge($prismjs-theme-core--token-clas
 ));
 
 $prismjs-theme-core--token-comment: map-merge($prismjs-theme-core--token-comment, (
-		color: #616161
+		color: #546e7a
 ));
 
 $prismjs-theme-core--token-constant: map-merge($prismjs-theme-core--token-constant, (
@@ -71,15 +71,15 @@ $prismjs-theme-core--token-constant: map-merge($prismjs-theme-core--token-consta
 ));
 
 $prismjs-theme-core--token-deleted: map-merge($prismjs-theme-core--token-deleted, (
-		color: #ff6666
+		color: #f07178
 ));
 
 $prismjs-theme-core--token-doctype: map-merge($prismjs-theme-core--token-doctype, (
-		color: #616161
+		color: #546e7a
 ));
 
 $prismjs-theme-core--token-entity: map-merge($prismjs-theme-core--token-entity, (
-		color: #ff6666
+		color: #f07178
 ));
 
 $prismjs-theme-core--token-function: map-merge($prismjs-theme-core--token-function, (
@@ -91,7 +91,7 @@ $prismjs-theme-core--token-hexcode: map-merge($prismjs-theme-core--token-hexcode
 ));
 
 $prismjs-theme-core--token-id: map-merge($prismjs-theme-core--token-id, (
-		color: #ff6666
+		color: #f07178
 ));
 
 $prismjs-theme-core--token-important: map-merge($prismjs-theme-core--token-important, (
@@ -117,7 +117,7 @@ $prismjs-theme-core--token-operator: map-merge($prismjs-theme-core--token-operat
 ));
 
 $prismjs-theme-core--token-prolog: map-merge($prismjs-theme-core--token-prolog, (
-		color: #616161
+		color: #546e7a
 ));
 
 $prismjs-theme-core--token-property: map-merge($prismjs-theme-core--token-property, (
@@ -125,11 +125,11 @@ $prismjs-theme-core--token-property: map-merge($prismjs-theme-core--token-proper
 ));
 
 $prismjs-theme-core--token-pseudo-class: map-merge($prismjs-theme-core--token-pseudo-class, (
-		color: #a5e844
+		color: #c3e88d
 ));
 
 $prismjs-theme-core--token-pseudo-element: map-merge($prismjs-theme-core--token-pseudo-element, (
-		color: #a5e844
+		color: #c3e88d
 ));
 
 $prismjs-theme-core--token-punctuation: map-merge($prismjs-theme-core--token-punctuation, (
@@ -141,11 +141,11 @@ $prismjs-theme-core--token-regex: map-merge($prismjs-theme-core--token-regex, (
 ));
 
 $prismjs-theme-core--token-selector: map-merge($prismjs-theme-core--token-selector, (
-		color: #ff6666
+		color: #f07178
 ));
 
 $prismjs-theme-core--token-string: map-merge($prismjs-theme-core--token-string, (
-		color: #a5e844
+		color: #c3e88d
 ));
 
 $prismjs-theme-core--token-symbol: map-merge($prismjs-theme-core--token-symbol, (
@@ -153,13 +153,18 @@ $prismjs-theme-core--token-symbol: map-merge($prismjs-theme-core--token-symbol, 
 ));
 
 $prismjs-theme-core--token-tag: map-merge($prismjs-theme-core--token-tag, (
-		color: #ff6666
+		color: #f07178
 ));
 
+$prismjs-theme-core--token-unit: map-merge($prismjs-theme-core--token-unit, (
+		color: #f07178
+));
+
+
 $prismjs-theme-core--token-url: map-merge($prismjs-theme-core--token-url, (
-		color: #ff6666
+		color: #f07178
 ));
 
 $prismjs-theme-core--token-variable: map-merge($prismjs-theme-core--token-variable, (
-		color: #ff6666
+		color: #f07178
 ));
