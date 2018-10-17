@@ -1,0 +1,91 @@
+@mixin prismjs-theme-sass-core--generate() {
+	@if mixin-exists(prismjs-theme-core--before-generate) {
+		@include prismjs-theme-core--before-generate();
+	}
+
+	@if ($prismjs-theme-sass-core--css-import-fonts) {
+		@import url(#{$prismjs-theme-sass-core--css-import-fonts});
+	}
+
+	%base {
+		text-align: left;
+		white-space: pre;
+		word-spacing: normal;
+		word-break: normal;
+		word-wrap: normal;
+		hyphens: none;
+		color: $prismjs-theme-sass-core--base-color;
+		text-shadow: $prismjs-theme-sass-core--base-text-shadow;
+		font-family: $prismjs-theme-sass-core--base-font-family;
+		font-size: $prismjs-theme-sass-core--base-font-size;
+		line-height: $prismjs-theme-sass-core--base-line-height;
+		tab-size: $prismjs-theme-sass-core--base-tab-size;
+		@if mixin-exists(prismjs-theme-core--base) {
+			@include prismjs-theme-core--base();
+		}
+
+		&::-moz-selection,
+		& ::-moz-selection {
+			text-shadow: none;
+			opacity: 1;
+			color: $prismjs-theme-sass-core--selection-color;
+			background: $prismjs-theme-sass-core--selection-background;
+		}
+
+		&::selection,
+		& ::selection {
+			text-shadow: none;
+			opacity: 1;
+			color: $prismjs-theme-sass-core--selection-color;
+			background: $prismjs-theme-sass-core--selection-background;
+		}
+
+		@media print {
+			text-shadow: none !important; // sass-lint:disable-line no-important
+		}
+	}
+
+	[class*="language-"] {
+		@at-root code#{&} {
+			@extend %base;
+
+			:not(pre) > & {
+				white-space: normal;
+				background: $prismjs-theme-sass-core--code-background;
+				border-radius: $prismjs-theme-sass-core--code-border-radius;
+				padding: $prismjs-theme-sass-core--code-padding;
+				@if mixin-exists(prismjs-theme-core--code) {
+					@include prismjs-theme-core--code();
+				}
+			}
+
+			pre > & {
+				background: none;
+			}
+		}
+
+		@at-root pre#{&} {
+			@extend %base;
+			overflow: auto;
+			position: relative;
+			background: $prismjs-theme-sass-core--pre-background;
+			border-radius: $prismjs-theme-sass-core--pre-border-radius;
+			margin: $prismjs-theme-sass-core--pre-margin;
+			padding: $prismjs-theme-sass-core--pre-padding;
+			@if mixin-exists(prismjs-theme-core--pre) {
+				@include prismjs-theme-core--pre();
+			}
+		}
+
+		.namespace {
+			opacity: $prismjs-theme-sass-core--namespace-opacity;
+			@if mixin-exists(prismjs-theme-core--namespace) {
+				@include prismjs-theme-core--namespace();
+			}
+		}
+	}
+
+	@if mixin-exists(prismjs-theme-core--after-generate) {
+		@include prismjs-theme-core--after-generate();
+	}
+}

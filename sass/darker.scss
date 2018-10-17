@@ -1,2 +1,6 @@
-@import './darker-defaults';
-@include prismjs-theme-core--generate();
+@import "../prismjs-theme-sass-core/sass/defaults";
+@import "../prismjs-theme-sass-core/sass/mixins";
+@import "./themes/darker-defaults";
+
+
+@include prismjs-theme-sass-core--generate();
