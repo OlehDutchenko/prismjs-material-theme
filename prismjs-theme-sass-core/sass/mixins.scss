@@ -92,6 +92,12 @@
 			}
 		}
 
+		@if mixin-exists(prismjs-theme-sass-core--token-atrule-line) {
+			&.atrule-line {
+				@include prismjs-theme-sass-core--token-atrule-line();
+			}
+		}
+
 		@if mixin-exists(prismjs-theme-sass-core--token-attr-name) {
 			&.attr-name {
 				@include prismjs-theme-sass-core--token-attr-name();
@@ -218,6 +224,12 @@
 			}
 		}
 
+		@if mixin-exists(prismjs-theme-sass-core--token-null) {
+			&.null {
+				@include prismjs-theme-sass-core--token-null();
+			}
+		}
+
 		@if mixin-exists(prismjs-theme-sass-core--token-number) {
 			&.number {
 				@include prismjs-theme-sass-core--token-number();
@@ -227,6 +239,12 @@
 		@if mixin-exists(prismjs-theme-sass-core--token-operator) {
 			&.operator {
 				@include prismjs-theme-sass-core--token-operator();
+			}
+		}
+
+		@if mixin-exists(prismjs-theme-sass-core--token-placeholder) {
+			&.placeholder {
+				@include prismjs-theme-sass-core--token-placeholder();
 			}
 		}
 
@@ -275,6 +293,12 @@
 		@if mixin-exists(prismjs-theme-sass-core--token-selector) {
 			&.selector {
 				@include prismjs-theme-sass-core--token-selector();
+			}
+		}
+
+		@if mixin-exists(prismjs-theme-sass-core--token-statement) {
+			&.statement {
+				@include prismjs-theme-sass-core--token-statement();
 			}
 		}
 
