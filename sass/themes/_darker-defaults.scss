@@ -11,6 +11,18 @@ $prismjs-theme-sass-core--selection-background: #363636;
 $prismjs-theme-sass-core--pre-background: #2f2f2f;
 $prismjs-theme-sass-core--code-background: #2f2f2f;
 
+@mixin prismjs-theme-core--pre() {
+	&.language-css,
+	&.language-sass,
+	&.language-scss {
+		> code {
+			color: #fd9170;
+		}
+	}
+}
+
+// tokens
+
 @mixin prismjs-theme-sass-core--token-atrule() {
 	color: #c792ea;
 	font-style: italic;
@@ -52,9 +64,9 @@ $prismjs-theme-sass-core--code-background: #2f2f2f;
 	color: #f2ff00;
 }
 
-@mixin prismjs-theme-sass-core--token-color() {
-	color: #f2ff00;
-}
+//@mixin prismjs-theme-sass-core--token-color() {
+//	color: #f2ff00;
+//}
 
 @mixin prismjs-theme-sass-core--token-comment() {
 	color: #616161;

@@ -1,0 +1,7 @@
+div::before {
+	content: url(foo.png);
+}
+
+div::before {
+	content: url('foo.png');
+}

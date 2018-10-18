@@ -11,6 +11,18 @@ $prismjs-theme-sass-core--selection-background: #363636;
 $prismjs-theme-sass-core--pre-background: #263238;
 $prismjs-theme-sass-core--code-background: #263238;
 
+@mixin prismjs-theme-core--pre() {
+	&.language-css,
+	&.language-sass,
+	&.language-scss {
+		> code {
+			color: #fd9170;
+		}
+	}
+}
+
+// tokens
+
 @mixin prismjs-theme-sass-core--token-atrule() {
 	color: #c792ea;
 	font-style: italic;
