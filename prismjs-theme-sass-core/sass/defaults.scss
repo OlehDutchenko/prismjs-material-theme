@@ -1,8 +1,8 @@
-$prismjs-theme-sass-core--css-import-fonts: 'https://fonts.googleapis.com/css?family=Roboto+Mono:400,400i,700,700i' !default;
+$prismjs-theme-sass-core--css-import-fonts: false !default;
 
 $prismjs-theme-sass-core--base-color: black !default;
 $prismjs-theme-sass-core--base-text-shadow: none !default;
-$prismjs-theme-sass-core--base-font-family: #{'Roboto Mono', monospace} !default;
+$prismjs-theme-sass-core--base-font-family: #{Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace} !default;
 $prismjs-theme-sass-core--base-font-size: 1em !default;
 $prismjs-theme-sass-core--base-line-height: 1.5em !default;
 $prismjs-theme-sass-core--base-tab-size: 4 !default;

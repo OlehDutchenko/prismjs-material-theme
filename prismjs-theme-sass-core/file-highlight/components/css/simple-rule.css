@@ -1,0 +1,7 @@
+ul{position:absolute}
+ol { position: relative }
+
+div {
+	top: 0;
+	border: 1px solid red;
+}

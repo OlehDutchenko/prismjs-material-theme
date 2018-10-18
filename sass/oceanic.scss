@@ -1,2 +1,4 @@
-//@import './oceanic-defaults';
-//@include prismjs-theme-sass-core--generate();
+@import "../prismjs-theme-sass-core/sass/core";
+@import "./themes/oceanic-defaults";
+
+@include prismjs-theme-sass-core--generate();

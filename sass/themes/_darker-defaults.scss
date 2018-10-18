@@ -1,0 +1,171 @@
+//@import "../../prismjs-theme-sass-core/sass/core";
+
+$prismjs-theme-sass-core--css-import-fonts: 'https://fonts.googleapis.com/css?family=Roboto+Mono:400,400i,700,700i';
+
+$prismjs-theme-sass-core--base-font-family: #{'Roboto Mono', monospace};
+$prismjs-theme-sass-core--base-color: #eee;
+
+$prismjs-theme-sass-core--selection-color: #eee;
+$prismjs-theme-sass-core--selection-background: #363636;
+
+$prismjs-theme-sass-core--pre-background: #2f2f2f;
+$prismjs-theme-sass-core--code-background: #2f2f2f;
+
+@mixin prismjs-theme-sass-core--token-atrule() {
+	color: #c792ea;
+	font-style: italic;
+}
+
+@mixin prismjs-theme-sass-core--token-attr-name() {
+	color: #ffcb6b;
+}
+
+@mixin prismjs-theme-sass-core--token-attr-value() {
+	color: #a5e844;
+}
+
+@mixin prismjs-theme-sass-core--token-attribute() {
+	color: #a5e844;
+}
+
+@mixin prismjs-theme-sass-core--token-boolean() {
+	color: #c792ea;
+}
+
+@mixin prismjs-theme-sass-core--token-builtin() {
+	color: #ffcb6b;
+}
+
+@mixin prismjs-theme-sass-core--token-cdata() {
+	color: #80cbc4;
+}
+
+@mixin prismjs-theme-sass-core--token-char() {
+	color: #80cbc4;
+}
+
+@mixin prismjs-theme-sass-core--token-class() {
+	color: #ffcb6b;
+}
+
+@mixin prismjs-theme-sass-core--token-class-name() {
+	color: #f2ff00;
+}
+
+@mixin prismjs-theme-sass-core--token-color() {
+	color: #f2ff00;
+}
+
+@mixin prismjs-theme-sass-core--token-comment() {
+	color: #616161;
+}
+
+@mixin prismjs-theme-sass-core--token-constant() {
+	color: #c792ea;
+}
+
+@mixin prismjs-theme-sass-core--token-deleted() {
+	color: #ff6666;
+}
+
+@mixin prismjs-theme-sass-core--token-doctype() {
+	color: #616161;
+}
+
+@mixin prismjs-theme-sass-core--token-entity() {
+	color: #ff6666;
+}
+
+@mixin prismjs-theme-sass-core--token-function() {
+	color: #c792ea;
+}
+
+@mixin prismjs-theme-sass-core--token-hexcode() {
+	color: #f2ff00;
+}
+
+@mixin prismjs-theme-sass-core--token-id() {
+	color: #ff6666;
+}
+
+@mixin prismjs-theme-sass-core--token-important() {
+	color: #c792ea;
+	font-weight: bold;
+}
+
+@mixin prismjs-theme-sass-core--token-inserted() {
+	color: #80cbc4;
+}
+
+@mixin prismjs-theme-sass-core--token-keyword() {
+	color: #c792ea;
+	font-style: italic;
+}
+
+@mixin prismjs-theme-sass-core--token-number() {
+	color: #c792ea;
+}
+
+@mixin prismjs-theme-sass-core--token-operator() {
+	color: #89ddff;
+}
+
+@mixin prismjs-theme-sass-core--token-prolog() {
+	color: #616161;
+}
+
+@mixin prismjs-theme-sass-core--token-property() {
+	color: #80cbc4;
+
+	.token.atrule & { // sass-lint:disable-line force-element-nesting
+		color: #ff6666;
+	}
+}
+
+@mixin prismjs-theme-sass-core--token-pseudo-class() {
+	color: #a5e844;
+}
+
+@mixin prismjs-theme-sass-core--token-pseudo-element() {
+	color: #a5e844;
+}
+
+@mixin prismjs-theme-sass-core--token-punctuation() {
+	color: #89ddff;
+}
+
+@mixin prismjs-theme-sass-core--token-regex() {
+	color: #f2ff00;
+}
+
+@mixin prismjs-theme-sass-core--token-rule() {
+	font-style: italic;
+}
+
+@mixin prismjs-theme-sass-core--token-selector() {
+	color: #ff6666;
+}
+
+@mixin prismjs-theme-sass-core--token-string() {
+	color: #a5e844;
+}
+
+@mixin prismjs-theme-sass-core--token-symbol() {
+	color: #c792ea;
+}
+
+@mixin prismjs-theme-sass-core--token-tag() {
+	color: #ff6666;
+}
+
+@mixin prismjs-theme-sass-core--token-unit() {
+	color: #ff6666;
+}
+
+@mixin prismjs-theme-sass-core--token-url() {
+	color: #ff6666;
+}
+
+@mixin prismjs-theme-sass-core--token-variable() {
+	color: #ff6666;
+}

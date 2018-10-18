@@ -1,0 +1,21 @@
+@media screen and (min-width: 100px) {
+}
+
+@font-face {
+	font-family: MyWebFont;
+	src: url('./fonts/my-webfont.woff2') format('woff2'),
+	     url('./fonts/my-webfont.woff') format('woff');
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'MyWebFont';
+	src: url('path-to/webfont.eot');
+	src: url('path-to/webfont.eot?#iefix') format('embedded-opentype'),
+	     url('path-to/webfont.woff') format('woff'),
+	     url('path-to/webfont.ttf') format('truetype'),
+	     url('path-to/webfont.svg#MyWebFont2') format('svg');
+	font-weight: 400;
+	font-style: italic;
+}

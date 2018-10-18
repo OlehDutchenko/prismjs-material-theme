@@ -1,0 +1,27 @@
+element#id.class[attr="value"]:nth-child(2n+3)::after {}
+
+div::before,
+span:before {}
+
+p:not(:last-child) {}
+
+.button:not(.is-active) {}
+
+h1+p,
+div + div {}
+
+label ~ input {}
+
+ol>li, ul > li {}
+
+pre[class*="language-"]::-moz-selection,
+pre[class*="language-"]::selection,
+pre[class*="language-"] ::-moz-selection,
+pre[class*="language-"] ::selection {}
+
+pre::-webkit-scrollbar-thumb {}
+
+input[type="search"]::-webkit-input-placeholder {}
+input[type="search"]:-ms-input-placeholder {}
+input[type="search"]::-ms-input-placeholder {}
+input[type="search"]::placeholder {}

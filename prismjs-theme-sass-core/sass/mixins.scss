@@ -85,6 +85,236 @@
 		}
 	}
 
+	.token {
+		@if mixin-exists(prismjs-theme-sass-core--token-atrule) {
+			&.atrule {
+				@include prismjs-theme-sass-core--token-atrule();
+			}
+		}
+
+		@if mixin-exists(prismjs-theme-sass-core--token-attr-name) {
+			&.attr-name {
+				@include prismjs-theme-sass-core--token-attr-name();
+			}
+		}
+
+		@if mixin-exists(prismjs-theme-sass-core--token-attr-value) {
+			&.attr-value {
+				@include prismjs-theme-sass-core--token-attr-value();
+			}
+		}
+
+		@if mixin-exists(prismjs-theme-sass-core--token-attribute) {
+			&.attribute {
+				@include prismjs-theme-sass-core--token-attribute();
+			}
+		}
+
+		@if mixin-exists(prismjs-theme-sass-core--token-boolean) {
+			&.boolean {
+				@include prismjs-theme-sass-core--token-boolean();
+			}
+		}
+
+		@if mixin-exists(prismjs-theme-sass-core--token-builtin) {
+			&.builtin {
+				@include prismjs-theme-sass-core--token-builtin();
+			}
+		}
+
+		@if mixin-exists(prismjs-theme-sass-core--token-cdata) {
+			&.cdata {
+				@include prismjs-theme-sass-core--token-cdata();
+			}
+		}
+
+		@if mixin-exists(prismjs-theme-sass-core--token-char) {
+			&.char {
+				@include prismjs-theme-sass-core--token-char();
+			}
+		}
+
+		@if mixin-exists(prismjs-theme-sass-core--token-class) {
+			&.class {
+				@include prismjs-theme-sass-core--token-class();
+			}
+		}
+
+		@if mixin-exists(prismjs-theme-sass-core--token-class-name) {
+			&.class-name {
+				@include prismjs-theme-sass-core--token-class-name();
+			}
+		}
+
+		@if mixin-exists(prismjs-theme-sass-core--token-color) {
+			&.color {
+				@include prismjs-theme-sass-core--token-color();
+			}
+		}
+
+		@if mixin-exists(prismjs-theme-sass-core--token-comment) {
+			&.comment {
+				@include prismjs-theme-sass-core--token-comment();
+			}
+		}
+
+		@if mixin-exists(prismjs-theme-sass-core--token-constant) {
+			&.constant {
+				@include prismjs-theme-sass-core--token-constant();
+			}
+		}
+
+		@if mixin-exists(prismjs-theme-sass-core--token-deleted) {
+			&.deleted {
+				@include prismjs-theme-sass-core--token-deleted();
+			}
+		}
+
+		@if mixin-exists(prismjs-theme-sass-core--token-doctype) {
+			&.doctype {
+				@include prismjs-theme-sass-core--token-doctype();
+			}
+		}
+
+		@if mixin-exists(prismjs-theme-sass-core--token-entity) {
+			&.entity {
+				@include prismjs-theme-sass-core--token-entity();
+			}
+		}
+
+		@if mixin-exists(prismjs-theme-sass-core--token-function) {
+			&.function {
+				@include prismjs-theme-sass-core--token-function();
+			}
+		}
+
+		@if mixin-exists(prismjs-theme-sass-core--token-hexcode) {
+			&.hexcode {
+				@include prismjs-theme-sass-core--token-hexcode();
+			}
+		}
+
+		@if mixin-exists(prismjs-theme-sass-core--token-id) {
+			&.id {
+				@include prismjs-theme-sass-core--token-id();
+			}
+		}
+
+		@if mixin-exists(prismjs-theme-sass-core--token-important) {
+			&.important {
+				@include prismjs-theme-sass-core--token-important();
+			}
+		}
+
+		@if mixin-exists(prismjs-theme-sass-core--token-inserted) {
+			&.inserted {
+				@include prismjs-theme-sass-core--token-inserted();
+			}
+		}
+
+		@if mixin-exists(prismjs-theme-sass-core--token-keyword) {
+			&.keyword {
+				@include prismjs-theme-sass-core--token-keyword();
+			}
+		}
+
+		@if mixin-exists(prismjs-theme-sass-core--token-number) {
+			&.number {
+				@include prismjs-theme-sass-core--token-number();
+			}
+		}
+
+		@if mixin-exists(prismjs-theme-sass-core--token-operator) {
+			&.operator {
+				@include prismjs-theme-sass-core--token-operator();
+			}
+		}
+
+		@if mixin-exists(prismjs-theme-sass-core--token-prolog) {
+			&.prolog {
+				@include prismjs-theme-sass-core--token-prolog();
+			}
+		}
+
+		@if mixin-exists(prismjs-theme-sass-core--token-property) {
+			&.property {
+				@include prismjs-theme-sass-core--token-property();
+			}
+		}
+
+		@if mixin-exists(prismjs-theme-sass-core--token-pseudo-class) {
+			&.pseudo-class {
+				@include prismjs-theme-sass-core--token-pseudo-class();
+			}
+		}
+
+		@if mixin-exists(prismjs-theme-sass-core--token-pseudo-element) {
+			&.pseudo-element {
+				@include prismjs-theme-sass-core--token-pseudo-element();
+			}
+		}
+
+		@if mixin-exists(prismjs-theme-sass-core--token-punctuation) {
+			&.punctuation {
+				@include prismjs-theme-sass-core--token-punctuation();
+			}
+		}
+
+		@if mixin-exists(prismjs-theme-sass-core--token-regex) {
+			&.regex {
+				@include prismjs-theme-sass-core--token-regex();
+			}
+		}
+
+		@if mixin-exists(prismjs-theme-sass-core--token-rule) {
+			&.rule {
+				@include prismjs-theme-sass-core--token-rule();
+			}
+		}
+
+		@if mixin-exists(prismjs-theme-sass-core--token-selector) {
+			&.selector {
+				@include prismjs-theme-sass-core--token-selector();
+			}
+		}
+
+		@if mixin-exists(prismjs-theme-sass-core--token-string) {
+			&.string {
+				@include prismjs-theme-sass-core--token-string();
+			}
+		}
+
+		@if mixin-exists(prismjs-theme-sass-core--token-symbol) {
+			&.symbol {
+				@include prismjs-theme-sass-core--token-symbol();
+			}
+		}
+
+		@if mixin-exists(prismjs-theme-sass-core--token-tag) {
+			&.tag {
+				@include prismjs-theme-sass-core--token-tag();
+			}
+		}
+
+		@if mixin-exists(prismjs-theme-sass-core--token-unit) {
+			&.unit {
+				@include prismjs-theme-sass-core--token-unit();
+			}
+		}
+
+		@if mixin-exists(prismjs-theme-sass-core--token-url) {
+			&.url {
+				@include prismjs-theme-sass-core--token-url();
+			}
+		}
+
+		@if mixin-exists(prismjs-theme-sass-core--token-variable) {
+			&.variable {
+				@include prismjs-theme-sass-core--token-variable();
+			}
+		}
+	}
+
 	@if mixin-exists(prismjs-theme-core--after-generate) {
 		@include prismjs-theme-core--after-generate();
 	}
