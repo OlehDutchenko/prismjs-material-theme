@@ -71,6 +71,13 @@
 		.block.is-active {
 			display: block;
 		}
+
+		pre[data-load-src],
+		pre[data-src] {
+			color: #fff;
+			padding: 1.25em 1em;
+			background-color: #345;
+		}
 	</style>
 </head>
 <body>
@@ -82,6 +89,7 @@
 			<div class="controls__list">
 				<button class="button js-change-theme is-active" data-href="./css/darker.css">theme darker</button>
 				<button class="button js-change-theme" data-href="./css/oceanic.css">theme oceanic</button>
+				<button class="button js-change-theme" data-href="./css/lighter.css">theme lighter</button>
 			</div>
 			<div class="controls__list">
 				<button class="button js-change-lang is-active" data-lang="css">CSS</button>
@@ -95,7 +103,9 @@
 				<pre data-src="./prismjs-theme-sass-core/file-highlight/components/css/comments.css"></pre>
 
 				<h2>Selectors</h2>
-				<pre data-src="./prismjs-theme-sass-core/file-highlight/components/css/selectors.css"></pre>
+				<pre class="line-numbers"
+						data-line="3,5,18-20"
+						data-src="./prismjs-theme-sass-core/file-highlight/components/css/selectors.css"></pre>
 
 				<h2>Empty rule</h2>
 				<pre data-src="./prismjs-theme-sass-core/file-highlight/components/css/empty-rule.css"></pre>
@@ -123,11 +133,14 @@
 		</div>
 
 		<div class="block js-block-lang" data-lang="javascript">
+			<h2>Comments</h2>
+			<pre data-load-src="./prismjs-theme-sass-core/file-highlight/components/js/comments.js"></pre>
+
 			<h2>Variable assignment</h2>
-			<pre><code class="language-javascript">var foo = "bar", baz = 5;</code></pre>
+			<pre data-load-src="./prismjs-theme-sass-core/file-highlight/components/js/variable-assignment.js"></pre>
 
 			<h2>Operators</h2>
-			<pre><code class="language-javascript">(1 + 2 * 3)/4 >= 3 &amp;&amp; 4 &lt; 5 || 6 > 7</code></pre>
+			<pre data-load-src="./prismjs-theme-sass-core/file-highlight/components/js/operators.js"></pre>
 
 			<h2>Indented code</h2>
 			<pre><code class="language-javascript">if (true) {
@@ -249,6 +262,9 @@ function AjaxRequest(url) {
 	foo();
 }
 </code></pre>
+			<br>
+			<hr>
+			<br>
 		</div>
 
 	</div>
@@ -261,6 +277,10 @@ function AjaxRequest(url) {
 	<script src="https://unpkg.com/prismjs@latest/plugins/highlight-keywords/prism-highlight-keywords.js"></script>
 	<link rel="stylesheet" href="https://unpkg.com/prismjs@latest/plugins/previewers/prism-previewers.css">
 	<script src="https://unpkg.com/prismjs@latest/plugins/previewers/prism-previewers.js"></script>
+	<link rel="stylesheet" href="https://unpkg.com/prismjs@latest/plugins/line-highlight/prism-line-highlight.css">
+	<script src="https://unpkg.com/prismjs@latest/plugins/line-highlight/prism-line-highlight.js"></script>
+	<link rel="stylesheet" href="https://unpkg.com/prismjs@latest/plugins/line-numbers/prism-line-numbers.css">
+	<script src="https://unpkg.com/prismjs@latest/plugins/line-numbers/prism-line-numbers.js"></script>
 	<script>
 		(function () {
 			var $changeTheme = document.querySelectorAll('.js-change-theme');
@@ -268,6 +288,15 @@ function AjaxRequest(url) {
 			var $blockLang = document.querySelectorAll('.js-block-lang');
 			var $themeHref = document.getElementById('theme-href');
 			var activeClass = 'is-active';
+
+			if ('Prism' in window) {
+				window.Prism.hooks.add('after-highlight', function (data) {
+					var parent = data.element.parentElement;
+					if (parent) {
+						delete parent.dataset.src;
+					}
+				});
+			}
 
 			for (var i = 0; i < $changeTheme.length; i++) {
 				$changeTheme[i].addEventListener('click', changeTheme);
@@ -285,6 +314,24 @@ function AjaxRequest(url) {
 				toggleActive($changeTheme, this);
 			}
 
+			function loadInBlock ($block) {
+				var $src = $block.querySelectorAll('[data-load-src]');
+
+				if (!$src.length) {
+					return false;
+				}
+
+				for (var i = 0; i < $src.length; i++) {
+					var $el = $src[i];
+					$el.dataset.src = $el.dataset.loadSrc;
+					delete $el.dataset.loadSrc;
+				}
+
+				if ('Prism' in window) {
+					window.Prism.fileHighlight($block);
+				}
+			}
+
 			function changeLang () {
 				if (this.classList.contains(activeClass)) {
 					return;
@@ -294,6 +341,7 @@ function AjaxRequest(url) {
 					var $block = $blockLang[i];
 					if ($block.dataset.lang === lang) {
 						$block.classList.add(activeClass);
+						loadInBlock($block);
 						continue;
 					}
 					$block.classList.remove(activeClass);

@@ -4,20 +4,20 @@ $prismjs-theme-sass-core--css-import-fonts: 'https://fonts.googleapis.com/css?fa
 
 $prismjs-theme-sass-core--base-font-family: #{'Roboto Mono', monospace};
 
-$prismjs-theme-sass-core--selection-color: #eee;
-$prismjs-theme-sass-core--selection-background: #363636;
+$prismjs-theme-sass-core--selection-color: #263238;
+$prismjs-theme-sass-core--selection-background: #cceae7;
 
-$prismjs-theme-sass-core--pre-color: #c3cee3;
-$prismjs-theme-sass-core--pre-background: #263238;
-$prismjs-theme-sass-core--code-color: #c3cee3;
-$prismjs-theme-sass-core--code-background: #263238;
+$prismjs-theme-sass-core--pre-color: #90a4ae;
+$prismjs-theme-sass-core--pre-background: #fafafa;
+$prismjs-theme-sass-core--code-color: #90a4ae;
+$prismjs-theme-sass-core--code-background: #fafafa;
 
 @mixin prismjs-theme-core--pre() {
 	&.language-css,
 	&.language-sass,
 	&.language-scss {
 		> code {
-			color: #fd9170;
+			color: #f76d47;
 		}
 	}
 }
@@ -25,152 +25,151 @@ $prismjs-theme-sass-core--code-background: #263238;
 // tokens
 
 @mixin prismjs-theme-sass-core--token-atrule() {
-	color: #c792ea;
+	color: #7c4dff;
 }
 
 @mixin prismjs-theme-sass-core--token-attr-name() {
-	color: #ffcb6b;
+	color: #39adb5;
 }
 
 @mixin prismjs-theme-sass-core--token-attr-value() {
-	color: #c3e88d;
+	color: #f6a434;
 }
 
 @mixin prismjs-theme-sass-core--token-attribute() {
-	color: #c3e88d;
+	color: #f6a434;
 }
 
 @mixin prismjs-theme-sass-core--token-boolean() {
-	color: #c792ea;
+	color: #7c4dff;
 }
 
 @mixin prismjs-theme-sass-core--token-builtin() {
-	color: #ffcb6b;
+	color: #39adb5;
 }
 
 @mixin prismjs-theme-sass-core--token-cdata() {
-	color: #80cbc4;
+	color: #39adb5;
 }
 
 @mixin prismjs-theme-sass-core--token-char() {
-	color: #80cbc4;
+	color: #39adb5;
 }
 
 @mixin prismjs-theme-sass-core--token-class() {
-	color: #ffcb6b;
+	color: #39adb5;
 }
 
 @mixin prismjs-theme-sass-core--token-class-name() {
-	color: #f2ff00;
+	color: #6182b8;
 }
 
-@mixin prismjs-theme-sass-core--token-color() {
-	color: #f2ff00;
-}
+//@mixin prismjs-theme-sass-core--token-color() {
+//	color: #6182b8;
+//}
 
 @mixin prismjs-theme-sass-core--token-comment() {
-	color: #546e7a;
+	color: #aabfc9;
 }
 
 @mixin prismjs-theme-sass-core--token-constant() {
-	color: #c792ea;
+	color: #7c4dff;
 }
 
 @mixin prismjs-theme-sass-core--token-deleted() {
-	color: #f07178;
+	color: #e53935;
 }
 
 @mixin prismjs-theme-sass-core--token-doctype() {
-	color: #546e7a;
+	color: #aabfc9;
 }
 
 @mixin prismjs-theme-sass-core--token-entity() {
-	color: #f07178;
+	color: #e53935;
 }
 
 @mixin prismjs-theme-sass-core--token-function() {
-	color: #c792ea;
+	color: #7c4dff;
 }
 
 @mixin prismjs-theme-sass-core--token-hexcode() {
-	color: #f2ff00;
+	color: #f76d47;
 }
 
 @mixin prismjs-theme-sass-core--token-id() {
-	color: #c792ea;
+	color: #7c4dff;
 	font-weight: bold;
 }
 
 @mixin prismjs-theme-sass-core--token-important() {
-	color: #c792ea;
+	color: #7c4dff;
 	font-weight: bold;
 }
 
 @mixin prismjs-theme-sass-core--token-inserted() {
-	color: #80cbc4;
+	color: #39adb5;
 }
 
 @mixin prismjs-theme-sass-core--token-keyword() {
-	color: #c792ea;
-	font-style: italic;
+	color: #7c4dff;
 }
 
 @mixin prismjs-theme-sass-core--token-number() {
-	color: #fd9170;
+	color: #f76d47;
 }
 
 @mixin prismjs-theme-sass-core--token-operator() {
-	color: #89ddff;
+	color: #39adb5;
 }
 
 @mixin prismjs-theme-sass-core--token-prolog() {
-	color: #546e7a;
+	color: #aabfc9;
 }
 
 @mixin prismjs-theme-sass-core--token-property() {
-	color: #80cbc4;
+	color: #39adb5;
 }
 
 @mixin prismjs-theme-sass-core--token-pseudo-class() {
-	color: #c3e88d;
+	color: #f6a434;
 }
 
 @mixin prismjs-theme-sass-core--token-pseudo-element() {
-	color: #c3e88d;
+	color: #f6a434;
 }
 
 @mixin prismjs-theme-sass-core--token-punctuation() {
-	color: #89ddff;
+	color: #39adb5;
 }
 
 @mixin prismjs-theme-sass-core--token-regex() {
-	color: #f2ff00;
+	color: #6182b8;
 }
 
 @mixin prismjs-theme-sass-core--token-selector() {
-	color: #f07178;
+	color: #e53935;
 }
 
 @mixin prismjs-theme-sass-core--token-string() {
-	color: #c3e88d;
+	color: #f6a434;
 }
 
 @mixin prismjs-theme-sass-core--token-symbol() {
-	color: #c792ea;
+	color: #7c4dff;
 }
 
 @mixin prismjs-theme-sass-core--token-tag() {
-	color: #f07178;
+	color: #e53935;
 }
 
 @mixin prismjs-theme-sass-core--token-unit() {
-	color: #f07178;
+	color: #f76d47;
 }
 
 @mixin prismjs-theme-sass-core--token-url() {
-	color: #fd9170;
+	color: #e53935;
 }
 
 @mixin prismjs-theme-sass-core--token-variable() {
-	color: #f07178;
+	color: #e53935;
 }

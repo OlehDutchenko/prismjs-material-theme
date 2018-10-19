@@ -14,7 +14,7 @@
 		word-break: normal;
 		word-wrap: normal;
 		hyphens: none;
-		color: $prismjs-theme-sass-core--base-color;
+		color: inherit;
 		text-shadow: $prismjs-theme-sass-core--base-text-shadow;
 		font-family: $prismjs-theme-sass-core--base-font-family;
 		font-size: $prismjs-theme-sass-core--base-font-size;
@@ -51,6 +51,7 @@
 
 			:not(pre) > & {
 				white-space: normal;
+				color: $prismjs-theme-sass-core--code-color;
 				background: $prismjs-theme-sass-core--code-background;
 				border-radius: $prismjs-theme-sass-core--code-border-radius;
 				padding: $prismjs-theme-sass-core--code-padding;
@@ -68,6 +69,7 @@
 			@extend %base;
 			overflow: auto;
 			position: relative;
+			color: $prismjs-theme-sass-core--pre-color;
 			background: $prismjs-theme-sass-core--pre-background;
 			border-radius: $prismjs-theme-sass-core--pre-border-radius;
 			margin: $prismjs-theme-sass-core--pre-margin;

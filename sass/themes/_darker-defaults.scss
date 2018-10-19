@@ -3,12 +3,13 @@
 $prismjs-theme-sass-core--css-import-fonts: 'https://fonts.googleapis.com/css?family=Roboto+Mono:400,400i,700,700i';
 
 $prismjs-theme-sass-core--base-font-family: #{'Roboto Mono', monospace};
-$prismjs-theme-sass-core--base-color: #eee;
 
 $prismjs-theme-sass-core--selection-color: #eee;
 $prismjs-theme-sass-core--selection-background: #363636;
 
+$prismjs-theme-sass-core--pre-color: #eee;
 $prismjs-theme-sass-core--pre-background: #2f2f2f;
+$prismjs-theme-sass-core--code-color: #eee;
 $prismjs-theme-sass-core--code-background: #2f2f2f;
 
 @mixin prismjs-theme-core--pre() {
@@ -25,7 +26,6 @@ $prismjs-theme-sass-core--code-background: #2f2f2f;
 
 @mixin prismjs-theme-sass-core--token-atrule() {
 	color: #c792ea;
-	font-style: italic;
 }
 
 @mixin prismjs-theme-sass-core--token-attr-name() {
@@ -97,7 +97,8 @@ $prismjs-theme-sass-core--code-background: #2f2f2f;
 }
 
 @mixin prismjs-theme-sass-core--token-id() {
-	color: #ff6666;
+	color: #c792ea;
+	font-weight: bold;
 }
 
 @mixin prismjs-theme-sass-core--token-important() {
@@ -111,7 +112,6 @@ $prismjs-theme-sass-core--code-background: #2f2f2f;
 
 @mixin prismjs-theme-sass-core--token-keyword() {
 	color: #c792ea;
-	font-style: italic;
 }
 
 @mixin prismjs-theme-sass-core--token-number() {
@@ -128,10 +128,6 @@ $prismjs-theme-sass-core--code-background: #2f2f2f;
 
 @mixin prismjs-theme-sass-core--token-property() {
 	color: #80cbc4;
-
-	.token.atrule & { // sass-lint:disable-line force-element-nesting
-		color: #ff6666;
-	}
 }
 
 @mixin prismjs-theme-sass-core--token-pseudo-class() {
@@ -148,10 +144,6 @@ $prismjs-theme-sass-core--code-background: #2f2f2f;
 
 @mixin prismjs-theme-sass-core--token-regex() {
 	color: #f2ff00;
-}
-
-@mixin prismjs-theme-sass-core--token-rule() {
-	font-style: italic;
 }
 
 @mixin prismjs-theme-sass-core--token-selector() {

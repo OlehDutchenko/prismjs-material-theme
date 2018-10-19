@@ -1,11 +1,11 @@
 {
   "name": "prismjs-material-theme",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "dev": "gulp dev sass",
-    "build": "gulp build",
+    "build": "gulp build  --production",
     "test": "npm run sass-lint && npm run build -- --no-dest",
     "sass-lint": "sass-lint -v -q"
   },

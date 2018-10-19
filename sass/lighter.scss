@@ -1,0 +1,4 @@
+@import "../prismjs-theme-sass-core/sass/core";
+@import "./themes/lighter-defaults";
+
+@include prismjs-theme-sass-core--generate();
